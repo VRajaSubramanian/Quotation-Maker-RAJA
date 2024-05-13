@@ -9,27 +9,7 @@ export default function InvoiceModal(props) {
     const element = document.querySelector("#invoiceCapture");
     const fileName = props.info.billTo ? `${props.info.billTo}.pdf` : "Quotation.pdf";
   
-    const headerContent = `
-      <div class="headerPart" style="border: 4px solid #836937; border-radius: 25px; padding: 20px; background-color: #1a2954; color: #836937; font-family: 'Times New Roman', serif; text-align: center; margin-left: 30px; margin-right: 30px; margin-top: 30px;">
-        <h2 style="font-size: 35px; margin-bottom: 10px; font-weight: bolder;">V.R.S. ELECTRICAL WORKS</h2>
-        <p style="font-size: 20px; margin-bottom: 20px; font-weight: bold;">25-1, Parasakthi Building, Tirunelveli Junction.</p>
-        <div>
-          <span><h3 style="font-size: 16px; font-weight: bolder;">LICENCED ELECTRICAL WIRING CONTRACTORS</h3></span>
-        </div>
-        <div style="display: flex; justify-content: space-between; margin-top: 15px;">
-          <div style="text-align: center;">
-            <span style="display: block; font-weight: bold;">R. VELAYUDHAM</span>
-            <span>98431 10609</span>
-          </div>
-          <div style="text-align: center;">
-            <span style="display: block; font-weight: bold;">R. ARUMUGAM</span>
-            <span>98433 35029</span>
-          </div>
-        </div>
-      </div>
-    `;
-  
-    const options = {
+      const options = {
       margin: [220, 10, 60, 10], 
       filename: fileName,
       html2canvas: { scale: 2 },
@@ -296,10 +276,10 @@ export default function InvoiceModal(props) {
             )}
           </div>
           <div>
-            <h4 className="text-center">Thanking You</h4>
+            <h6 className="text-center">Thanking You</h6>
             <div className="sign text-end">
               <h6>Yours Truly,</h6>
-              <h5>R. Velayudham</h5>
+              <h5><b>R. Velayudham</b></h5>
               <div className="img">
                 <img className="text-end" src="sign.png" alt="Signature" style={{ height: "30pt", width: "100pt" }} />
               </div>
